@@ -10,8 +10,8 @@ A set of tools to transforms text in web document by adding mark
 This allows to easily  add specific properties such  as color,
 background-color, gradian ...
 
-[comment]: <> ( Local Variables: )
-[comment]: <> ( mode: Markdown )
-[comment]: <> ( eval: (flyspell-mode 1) )
-[comment]: <> ( ispell-local-dictionary: "en" )
-[comment]: <> ( End: )
+[//]: # ( Local Variables: )
+[//]: # ( mode: Markdown )
+[//]: # ( eval: (flyspell-mode 1) )
+[//]: #( ispell-local-dictionary: "en" )
+[//]: #<> ( End: )
