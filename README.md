@@ -11,7 +11,11 @@ This allows to easily  add specific properties such  as color,
 background-color, gradian ...
 
 [//]: # ( Local Variables: )
+
 [//]: # ( mode: Markdown )
-[//]: # ( eval: (flyspell-mode 1) )
+
 [//]: # ( ispell-local-dictionary: "en" )
+
+[//]: # ( eval: (flyspell-mode 1) )
+
 [//]: # ( End: )
