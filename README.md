@@ -13,5 +13,5 @@ background-color, gradian ...
 [//]: # ( Local Variables: )
 [//]: # ( mode: Markdown )
 [//]: # ( eval: (flyspell-mode 1) )
-[//]: #( ispell-local-dictionary: "en" )
-[//]: #<> ( End: )
+[//]: # ( ispell-local-dictionary: "en" )
+[//]: # ( End: )
