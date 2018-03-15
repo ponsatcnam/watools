@@ -2,9 +2,10 @@
 
 A set of tools to transforms text in web document by adding mark
 (span)  at several levels
-	-characters 
-	-words
-	-lines
+
+	* characters 
+	* words
+	* lines
 
 This allows to easily  add specific properties such  as color,
 background-color, gradian ...
