@@ -1,6 +1,6 @@
 # watools
 
-A set of tools to transforms text in web document by adding mark
+A set of tools to transforms text content in web document by adding mark
 (span)  at several levels
 
 	* characters 
@@ -8,7 +8,11 @@ A set of tools to transforms text in web document by adding mark
 	* lines
 
 This allows to easily  add specific properties such  as color,
-background-color, gradian ...
+background-color, gradient ...
+
+This has been developed  to produce **web accessibility**  tools for dyspraxic
+people ( hence its name ).
+
 
 [//]: # ( Local Variables: )
 [//]: # ( mode: Markdown)
