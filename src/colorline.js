@@ -7,14 +7,14 @@ var bgcolors=["yellow","gray"];
 var nbcolor=0;
 
     //add colors 
-function addColor(selector,options){
+function addColor(selector,option){
     var selector=selector ||"p-line-00-33";
     var option=option ||{};
-    var colors=option.colors||colors;
-    var modColor=colors.length;
+    var color=option.colors||colors;
+    var modColor=color.length;
     var nbcolor=0;
     var line=document.getElementsByClassName(selector);
-	[].forEach.call(line,(x)=>{x.style.color=colors[(nbcolor++)%modColor];})
+	[].forEach.call(line,(x)=>{x.style.color=color[(nbcolor++)%modColor];})
     }
 
     //add background colors and change to bloc (for a 100% widht)
@@ -40,45 +40,55 @@ function addBgColor(selector,option){
     //to avoid problems with background-clip: text;  we enrich the styleSheet
     //this return a function to clean the sheet.
     //https://stackoverflow.com/questions/707565/how-do-you-add-css-with-javascript
-     function addGradientColors(p,options){
-	var colors=option.colors||colors;
-	var modColor=colors.length;
-	var nbcolor=0;
-
-	    var lines=document.getElementsByClassName("p-line-00-33");
-	[].forEach.call(lines,(x)=>{x.classList.add("grad-00-33----"+nbcolor%modColor);});
-	 var index=[];
-	 if(document.styleSheets.length<1){
-	 var s=document.createElement("style");
+function addGradientColors(selector,option){
+    var selector=selector ||"p-line-00-33";
+    var option=option ||{};
+   
+    var color=option.colors||colors;
+    
+    var modColor=color.length;
+    var nbcolor=0;
+    
+    var lines=document.getElementsByClassName(selector);
+	[].forEach.call(lines,(x)=>{x.classList.add("grad-00-33----"+nbcolor++%modColor);});
+    var index=[];
+    if(document.styleSheets.length<1){
+	var s=document.createElement("style");
+	s.id="added-00-33"
 	     document.body.appendChild(s);
 	 }
-	var sheet =document.styleSheets[0];
-	for(var i=0;i<modColor;i++){
+    var sheet =document.styleSheets[0];
+    for(var i=0;i<modColor;i++){
 	    index.push(sheet.cssRules.length);
-	    var cstart =bgcolors[nbcolor%modColor];
-	    var cend =bgcolors[(i+1)%modColor];
-	    var sheet = window.document.styleSheets[0];
-	    var rule="grad-00-33----"+i+
-		"{background: linear-gradient(to right, "+cstart+" 0% ,"+cend+" 100%);"+
+	var cstart =color[(nbcolor+i)%modColor];
+	var cend =color[(nbcolor+i+1)%modColor];
+	console.log(modColor);
+	   // var sheet = window.document.styleSheets[0];
+	    var rule=".grad-00-33----"+i+
+		" {background: linear-gradient(to right, "+cstart+" 0% ,"+cend+" 100%);"+
 		"color:transparent;-webkit-background-clip: text;background-clip: text;   }";
-	    sheet.insertRule(rule, sheet.cssRules.length);
+	sheet.insertRule(rule, sheet.cssRules.length);
+	console.log("add"+ rule);
 	    
 	}
-	return function(index,sheet){
-	    index.forEach((x)=>sheet.deleteRule(x))
+    return function(index,sheet){
+	()=>
+	    index.forEach((x)=>sheet.deleteRule(x));
 	}(index,sheet);
-    }
+}
  //2 background
-function addBgGradientColors(p,options){
-    var colors=option.colors||colors;
-    var modColor=colors.length;
+function addBgGradientColors(selector,option){
+    var selector=selector ||"p-line-00-33";
+    var option=option ||{};
+    var color=option.colors||colors;
+    var modColor=color.length;
     var nbcolor=0;
     var display=option.display || "block";
     
     var lines=document.getElementsByClassName("p-line-00-33");
     [].forEach.call(lines,(x)=>{
-	var cstart =bgcolors[nbcolor%3];
-	var cend =bgcolors[(nbcolor++)%3];
+	var cstart =color[nbcolor%3];
+	var cend =color[(nbcolor++)%3];
 	x.style.background="linear-gradient(45deg,"+cstart+","+ cend+")";    
 	x.style.display=display}) ;//block ou pas
 }
@@ -86,6 +96,3 @@ function addBgGradientColors(p,options){
 
 
 
-
-    var sheet = window.document.styleSheets[0];
-sheet.insertRule('{background: linear-gradient(to right, red % ,pink %);color:transparent;-webkit-background-clip: text;background-clip: text;   }', sheet.cssRules.length);
