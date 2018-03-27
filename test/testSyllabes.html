@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="author" content="Olivier Pons"/>
+		<meta name="Description"
+			content="demo/test of markline.js, a tools to
+mark line in p and others blocks " />
+		
+		<title> test mark syllabe</title>
+		
+	</head>
+	<body>
+		<h1>test mark syllabe </h1>
+	
+		<p>Qui chevauche si tard à travers la nuit et le vent ?
+			C'est le père avec son enfant.
+			Il porte l'enfant dans ses bras,
+			Il le tient ferme, il le réchauffe.
+		</p>
+		<p>« Mon fils, pourquoi cette peur, pourquoi te cacher ainsi le visage ?
+			Père, ne vois-tu pas le Roi des Aulnes,
+			Le Roi des Aulnes, avec sa couronne et ses longs cheveux ?
+			— Mon fils, c’est un brouillard qui traîne.
+		</p>
+		
+		<p>— Viens, cher enfant, viens avec moi !
+			Nous jouerons ensemble à de si jolis jeux !
+			Maintes fleurs émaillées brillent sur la rive ;
+			Ma mère a maintes robes d’or.
+		</p>
+
+		<p>— Mon père, mon père, et tu n’entends pas
+			Ce que le Roi des Aulnes doucement me promet ?
+			— Sois tranquille, reste tranquille, mon enfant :
+			C’est le vent qui murmure dans les feuilles sèches.
+		</p>
+		
+		<p>— Gentil enfant, veux-tu me suivre ?
+			Mes filles auront grand soin de toi ;
+			Mes filles mènent la danse nocturne.
+			Elles te berceront, elles t’endormiront, à leur danse, à leur chant.
+		</p>
+		
+		<p>— Mon père, mon père, et ne vois-tu pas là-bas
+			Les filles du Roi des Aulnes à cette place sombre ?
+			— Mon fils, mon fils, je le vois bien :
+			Ce sont les vieux saules qui paraissent grisâtres.
+		</p>
+		
+		<p>— Je t’aime, ta beauté me charme,
+			Et, si tu ne veux pas céder, j’userai de violence.
+			— Mon père, mon père, voilà qu’il me saisit !
+			Le Roi des Aulnes m’a fait mal ! »
+		</p>
+		
+		<p>Le père frémit, il presse son cheval,
+			Il tient dans ses bras l’enfant qui gémit ;
+			Il arrive à sa maison avec peine, avec angoisse :
+			L’enfant dans ses bras était mort.
+		</p>
+		<script src="../src/syllabe.js"></script>
+		<script src="../src/colorline.js"></script>
+
+<script>
+var allp=document.getElementsByTagName("p");
+[].forEach.call(allp,(p)=>{
+p.innerHTML=cutInSylabe(p.innerHTML);
+	addColor('syllabe');
+	var deco=addColor;
+	});
+</script>
+</body>
+
+</html>
