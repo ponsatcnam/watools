@@ -48,11 +48,11 @@ function cutInSylabe(thetext) {
 	    //	"<span class='punctuation'>$1</span>");
            console.log("TEXT "+text+" ORIG "+orig);
 	return text;
-		if(text===orig){return text}else{return loop(text);}
+	if(text===orig){return text;}else{return loop(text);}
     }
     var result=loop(thetext) ;
     var res2= result.split("|");
-	var text2=res2.map((x)=>"<span class='syllabe'>"+x+"</span>").join("");
+    var text2=res2.map((x)=>"<span class='syllabe'>"+x+"</span>").join("");
     return text2;
 }
 /*
