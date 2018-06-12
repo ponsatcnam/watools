@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="author" content="Olivier Pons"/>
+		<meta name="Description"
+			content="a test HTML file for text transformation " />
+		
+		<title>HTML test</title>
+		
+	</head>
+	<body data-lining data-auto-resize>
+		<h1>Neutral  text to test text transformation</h1>
+		<div >
+		<p ><img id="img" src="moi.png" width="140" alt=""/>Qui <b>chevauche</b> si tard à <b>travers</b> la nuit et le vent ?
+			C'est le père avec son enfant.
+			Il porte l'enfant dans<img id="img" src="moi.png" width="140" alt="" style="position:absolute;top:1px;right:1px"/> ses bras,
+			Il le tient ferme, il le réchauffe.
+		<br/>
+		« Mon fils, pourquoi cette peur, pourquoi <textarea>jdsjksjksjdkjk</textarea>te cacher ainsi le visage ?
+			Père, ne vois-tu pas le Roi des Aulnes,
+			Le Roi des Aulnes, avec sa couronne et ses longs cheveux ?
+			— Mon fils, c’est un brouillard qui traîne.
+		
+
+		<br/>
+		— Viens, cher enfant, viens avec moi !
+			Nous jouerons ensemble <video width="100" height="40" controls  poster="http://www.supportduweb.com/page/media/videoTag/BigBuckBunny.png">
+	<source src="./BigBuckBunny.mp4" type="video/mp4">
+
+	Your browser does not support the video tag or the file format of this video. <a href="http://www.supportduweb.com/">http://www.supportduweb.com/</a>
+</video>à de si jolis jeux !
+			Maintes fleurs émaillées brillent sur la rive ;
+			Ma mère a maintes robes d’or.
+		</p>
+
+		<p>— Mon père, mon père, et tu n’entends pas
+			Ce que le Roi des Aulnes doucement me promet ?
+			— Sois tranquille, reste tranquille, mon enfant :
+			C’est le vent qui murmure dans les feuilles sèches.
+		</p>
+		<hr/>		
+		<p>— Gentil enfant, veux-tu me suivre ?
+			Mes filles auront grand soin de toi ;
+			Mes filles mènent la danse nocturne.
+			Elles te berceront, elles t’endormiront, à leur danse, à leur chant.
+		</p>
+		
+		<p>— Mon père, mon père, et ne<img id="img" src="moi.png" width="140" alt="" style="float:right"/> vois-tu pas là-bas
+			Les filles du Roi des Aulnes à cette place sombre ?
+			— Mon fils, mon fils, je le vois bien :
+			Ce sont les vieux saules qui paraissent grisâtres.
+		</p>
+		<pre>
+bla bla
+bli bli
+dsdlsqkdlsq
+sdklklklsd
+		</pre>
+		<p>— Je t’aime, ta beauté me charme,
+			Et, si tu ne veux pas céder, j’userai de violence.
+			— Mon père, mon père, voilà qu’il me saisit !
+			Le Roi des Aulnes m’a fait mal ! »
+		</p>
+		
+		<p>Le père frémit, il presse son <img src="moi.png" alt="" >cheval,
+			Il tient dans ses bras l’enfant qui gémit ;
+			Il arrive à sa maison avec peine, avec angoisse :
+			L’enfant dans ses bras était mort.
+		</p>
+		
+</div>
+<style>
+
+body .line:nth-of-type(3n){color:red;}
+body .line:nth-of-type(3n+1){color:blue;}
+body .line:nth-of-type(3n+2){color:green;}
+</style>
+
+
+<script src="../src/mlineVero.js"></script>
+<script src="../src/colorline.js"></script>
+<script>
+
+
+var urlParams = new URLSearchParams(window.location.search);
+var tag=urlParams.get("watag") ||"p";
+
+
+var deco;
+function line3Color(){
+    var m=tag;
+    dys.mark(m);
+    addColor(); deco=addColor;
+    console.log("switched to 3 color");
+    
+}
+line3Color();
+</script>
+
+
+	</body>
+</html>
